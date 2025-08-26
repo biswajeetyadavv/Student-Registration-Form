@@ -4,7 +4,7 @@
         input:hover{
             background-color: lightblue;
             font-size: small;
-            color: violet;
+            color: black;
         }
 
         
@@ -60,15 +60,28 @@
         }
         .Age{
             margin-left: 65px;
-        }
-        
-
-      
+        }      
 
         .great{
             color: violet;
             text-align: center;
             font-style: bold;
+        }
+
+        [for="HTML"]{
+            margin-left: 20px;
+        }
+        
+        [for="CSS"]{
+            margin-left: 20px;
+        }
+
+        [for="JAVASCRIPT"]{
+            margin-left: 30px
+        }
+
+        h3{
+            text-align: center;
         }
     </style>
     <head>
@@ -79,7 +92,7 @@
     <body>
 
         <form action="" >
-        <h1>Student Registration Form</h1>
+        <h1 id="message">Student Registration Form</h1>
 
         <label for="fname">First Name</label>
         <input type="text" id="fname" placeholder="Biswajeet">
@@ -119,15 +132,16 @@
             <option value="option1">B tech</option>
         </select>
         <br> <br>
-        <input type="button" value="Register"><br><br><br>
+        <input onclick="changeMessage()" type="button" value="Register"><br><br><br>
 
-        <h2>Other Star Course</h2>
-        <ul>
+        <h3>Other Star Course</h3>
+        <label for="HTML">HTML</label> <label for="CSS"> CSS</label> <label for="JAVASCRIPT">JAVASCRIPT</label>
+        <!-- <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JAVASCRIPT</li>
         </ul>
-        <br><br>
+        <br><br> -->
         </form>
 
 
@@ -153,7 +167,11 @@
         </table>
 
 
-        
+        <script>
+  function changeMessage() {
+    document.getElementById("message").innerHTML = "Registred";
+  }
+</script>
 
 
 
